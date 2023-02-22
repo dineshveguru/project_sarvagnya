@@ -50,8 +50,7 @@ window.onload = function () {
 };
 
 window.onscroll = function () {
-  // scrollFunction();
-  console.log("scrolling...");
+  scrollFunction();
 };
 
 function scrollFunction() {
