@@ -6,27 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sarvagnya 2K23</title>
     <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="stylesheet" href="locomotive-scroll.css" />
   </head>
   <body>
-    <section class="home">
-      <div class="home--title">
-        <h1>SARVAGNYA</h1>
-        <h2>2K23</h2>
-        <div class="home--banner">
-          <a
-            href=""
-            class="typewrite"
-            data-period="2000"
-            data-type='["Welcome to TechFest organized by CSE", "Get ready to explore the knowledge"]'
-          >
-            <span class="wrap"></span>
-          </a>
+    <section data-scroll-container>
+      <section class="home" data-scroll-section>
+        <div class="home--title">
+          <h1 data-scroll data-scroll-speed="2">SARVAGNYA</h1>
+          <h2 data-scroll data-scroll-speed="2">2K23</h2>
+          <div class="home--banner" data-scroll data-scroll-speed="2">
+            <p
+              href=""
+              class="typewrite"
+              data-period="2000"
+              data-type='["Welcome to TechFest organized by CSE", "Get ready to explore the knowledge"]'
+            >
+              <span class="wrap"></span>
+            </p>
+          </div>
         </div>
-      </div>
-      <div class="home--button">
-        <span>Explore more!</span>
-      </div>
+        <div class="home--button" data-scroll data-scroll-speed="2">
+          <span>Explore more!</span>
+        </div>
+      </section>
+      <section class="sponsors" data-scroll-section></section>
     </section>
     <script src="./index.js"></script>
+    <script src="locomotive-scroll.min.js"></script>
+    <script>
+      (function () {
+        var scroll = new LocomotiveScroll({
+          el: document.querySelector("[data-scroll-container]"),
+          smooth: true,
+        });
+      })();
+    </script>
   </body>
 </html>
