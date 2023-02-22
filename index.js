@@ -50,14 +50,12 @@ window.onload = function () {
 };
 
 window.onscroll = function () {
-  scrollFunction();
+  // scrollFunction();
+  console.log("scrolling...");
 };
 
 function scrollFunction() {
-  if (
-    document.body.scrollTop > 600 ||
-    document.documentElement.scrollTop > 600
-  ) {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     document.getElementById("navbar").style.top = "0";
   } else {
     document.getElementById("navbar").style.top = "-50px";
