@@ -54,10 +54,10 @@ window.onscroll = function () {
 };
 
 function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
     document.getElementById("navbar").style.top = "0";
   } else {
-    document.getElementById("navbar").style.top = "-50px";
+    document.getElementById("navbar").style.top = "-100px";
   }
 }
 
@@ -70,13 +70,13 @@ element.addEventListener("mouseleave", function() {
   element.innerHTML = "EpicVenture Awaits!!"
 })
 
-const click_element = document.getElementById("navbar--heading")
+const click_element = document.getElementById("hamburger")
 click_element.addEventListener("click", function() {
-  const dragElement = document.getElementById("navbar--elements")
+  const dragElement = document.getElementById("navbar--section")
   if (dragElement.style.top < "0"){
-    dragElement.style.top = "47px"
+    dragElement.style.top = "95px"
   }
   else{
-    dragElement.style.top = "-110px"
+    dragElement.style.top = "-100px"
   }
 })
