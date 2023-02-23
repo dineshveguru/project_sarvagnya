@@ -60,6 +60,8 @@ body{
     background-image: linear-gradient(#fff, rgba(255, 255, 255, 0.6));
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
+    user-select: none;
+    cursor: pointer;
 }
 
 
@@ -324,7 +326,6 @@ body{
         gap: 1rem;
         justify-content:center;
         align-items: center;
-        padding-bottom: 1rem;
         position: absolute;
         top: -110px;
         background-color: #1c0041b1;
@@ -340,6 +341,7 @@ body{
 
     .navbar{
         flex-direction: column;
+        justify-content: center;
     }
     .navbar > div:nth-child(1){
         margin-left: 0;
