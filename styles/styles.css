@@ -5,7 +5,6 @@
 
 body{
     font-size: 62.5%;
-    width: 100%;
 }
 
 /* Navbar */
@@ -113,7 +112,7 @@ body{
     position: fixed;
     top: 0;
     z-index: 2;
-    width: inherit;
+    width: 100%;
 }
 
 .nav {
@@ -274,7 +273,8 @@ body{
 
 .home{
     background: url("../assests/hero.png");
-    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
     height: 100vh;
     background-position: center;
     background-size: cover;
@@ -342,7 +342,8 @@ body{
 /* Sponsors */
 
 .hero{
-    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
     height: 100vh;
     background: #000;
     background-image: linear-gradient(135deg, rgba(17, 32, 72, 0.87), 
@@ -418,12 +419,14 @@ body{
 /* Trailer */
 
 .trailer{
-    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
     color: #fff;
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 2rem;
+    overflow: hidden;
 }
 
 .trailer h1{
@@ -482,6 +485,8 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    max-width: 100%;
+    min-width: 100%;
 }
 
 .cultural h1{
@@ -613,7 +618,7 @@ body{
 @media screen and (max-width: 700px) {
 
     .home h1{
-        font-size: 4rem;
+        font-size: 2rem;
     }
 
     .home h2{
@@ -633,7 +638,7 @@ body{
 
 @media screen and (max-width: 1100px) {
     .home h1{
-        font-size: 4rem;
+        font-size: 6rem;
     }
 }
 
