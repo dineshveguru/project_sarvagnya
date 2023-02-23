@@ -134,7 +134,7 @@ body{
 
 /* Sponsors */
 
-.sponsors{
+.hero{
     width: 100%;
     height: 100vh;
     background: #000;
@@ -156,24 +156,171 @@ body{
 
 .grid--container{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(5, 200px);
+    grid-template-rows: repeat(2, 200px);
     color: #fff;
     gap: 1rem;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    row-gap: 4rem;
+    margin-top: 4rem;
+}
+
+.element--container{
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
 }
 
 .grid--element{
-    border: 1px solid yellow;
+    border: 1px solid rgb(135, 135, 135);
+    border-radius: 2rem;
+    background: linear-gradient(135deg, #72727256, #3838381b);
+    backdrop-filter: blur(5px);
 }
 
 .grid--element img{
-    transform: scale(10%);
+    height: 30px;
+    width: 20px;
 }
 
 
+.grid--container div:nth-child(2){
+    grid-row: 1;
+    grid-column: 3;
+}
+.grid--container div:nth-child(3){
+    grid-row: 1;
+    grid-column: 5;
+}
+.grid--container div:nth-child(4){
+    grid-row: 2;
+    grid-column: 2;
+}
+.grid--container div:nth-child(5){
+    grid-row: 2;
+    grid-column: 4;
+}
+
+
+/* Trailer */
+
+.trailer{
+    width: 100%;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.trailer h1{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+
+.trailer div:nth-child(1){
+    margin-left: 2rem;
+}
+
+.trailer div:nth-child(2){
+    margin-right: 2rem;
+    text-align: center;
+}
+
+.trailer div:nth-child(2) p{
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.trailer div:nth-child(2) p span{
+    color: #00ffff;
+}
+
+.trailer div:nth-child(2) a{
+    color: #fff;
+    font-size: 1.2rem;
+    border: 0;
+    outline: 0;
+    border: 1px solid #00ffff;
+    border-radius: 5rem;
+    padding: 1rem 1rem;
+    text-decoration: none;
+}
+
+.trailer div:nth-child(2) a:hover{
+    cursor: pointer;
+    background-color: #00ffff;
+    color: #0F3786;
+}
+
+.youtube--container{
+    width: 560px;
+    height: 315px;
+}
+
+/* Cultural */
+
+.cultural{
+    background-image: url("../assests/Rectangle\ 3.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cultural h1{
+    background-image: linear-gradient(#fff , #e700b5dd );
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.cultural p{
+    color: #fff;
+    font-size: 2rem;
+    margin-right: 10rem;
+    margin-left: 10rem;
+    margin-top: 3rem;
+    background-image: linear-gradient(30deg, #84B9F9, #9936BD, #F27E7E);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.cultural--button{
+    text-decoration: none;
+    color: #84B9F9;
+    border: 1px solid #84b9F9;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    margin-top: 10rem;
+    font-size: 2rem;
+    width: 15rem;
+    text-align: center;
+    transition: 0.2s all;
+}
+
+.cultural--button:hover{
+    background-color: #84b9F9;
+    color: #fff;
+}
 
 /* Responsive */
 
+@media screen and (min-width: 400px) and (max-width: 700px) {
+    .home h1{
+        font-size: 1rem;
+    }
+}
 @media screen and (max-width: 700px) {
 
     .home h1{
@@ -194,8 +341,88 @@ body{
 }
 
 
+
 @media screen and (max-width: 1100px) {
     .home h1{
         font-size: 4rem;
+    }
+}
+
+/* Sponsors */
+
+@media screen and (max-width: 1100px) {
+    .grid--container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    
+}
+
+@media screen and (max-width: 650px) {
+    .element--container{
+        width: 150px;
+        height: 150px;
+    }
+
+}
+
+
+/* Trailer */
+
+@media screen and (max-width: 1100px){
+    .trailer{
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 0;
+    }
+    .trailer div:nth-child(2){
+        margin-right: 0;
+    }
+
+    .trailer h1{
+        font-size: 2rem;
+    }
+
+    .youtube--container{
+        transform: scale(60%);
+        margin-left: 0;
+    }
+
+    .trailer p{
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
+    .trailer div:nth-child(2) p{
+        font-size: 1.25rem;
+        margin-top: 4rem;
+    }
+
+    .trailer div:nth-child(1){
+        margin-right: 2rem;
+    }
+}
+
+/* cultural */
+@media screen and (max-width: 700px){
+
+    .cultural h1{
+        font-size: 3rem;
+    }
+    
+    .cultural p{
+        font-size: 1.25rem;
+        text-align: center;
+        margin-right: 2rem;
+        margin-left: 2rem;
+    }
+
+    .cultural--button{
+        width: 10rem;
+        font-size: 1rem;
     }
 }

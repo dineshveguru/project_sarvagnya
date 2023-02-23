@@ -60,3 +60,12 @@ function scrollFunction() {
     document.getElementById("navbar").style.top = "-50px";
   }
 }
+
+
+const element = document.getElementById("cultural--button")
+element.addEventListener("mouseenter", function() {
+  element.innerHTML = "Join Now!!"
+})
+element.addEventListener("mouseleave", function() {
+  element.innerHTML = "EpicVenture Awaits!!"
+})
