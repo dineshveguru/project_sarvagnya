@@ -5,6 +5,7 @@
 
 body{
     font-size: 62.5%;
+    width: 100%;
 }
 
 /* Navbar */
@@ -112,7 +113,7 @@ body{
     position: fixed;
     top: 0;
     z-index: 2;
-    width: 100%;
+    width: inherit;
 }
 
 .nav {
@@ -170,7 +171,7 @@ body{
     }
 
     .nav--container{
-        width: 90%;
+        width: 100%;
     }
     .nav > .nav-btn > label {
       display: inline-block;
