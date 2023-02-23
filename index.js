@@ -69,3 +69,14 @@ element.addEventListener("mouseenter", function() {
 element.addEventListener("mouseleave", function() {
   element.innerHTML = "EpicVenture Awaits!!"
 })
+
+const click_element = document.getElementById("navbar--heading")
+click_element.addEventListener("click", function() {
+  const dragElement = document.getElementById("navbar--elements")
+  if (dragElement.style.top < "0"){
+    dragElement.style.top = "47px"
+  }
+  else{
+    dragElement.style.top = "-110px"
+  }
+})
