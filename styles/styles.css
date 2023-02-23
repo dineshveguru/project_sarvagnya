@@ -168,6 +168,10 @@ body{
       right: 0px;
       top: 0px;
     }
+
+    .nav--container{
+        width: 90%;
+    }
     .nav > .nav-btn > label {
       display: inline-block;
       width: 50px;
