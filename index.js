@@ -34,6 +34,7 @@ TxtType.prototype.tick = function () {
   }, delta);
 };
 
+
 window.onload = function () {
   var elements = document.getElementsByClassName("typewrite");
   for (var i = 0; i < elements.length; i++) {
@@ -70,13 +71,11 @@ element.addEventListener("mouseleave", function() {
   element.innerHTML = "EpicVenture Awaits!!"
 })
 
-const click_element = document.getElementById("hamburger")
-click_element.addEventListener("click", function() {
-  const dragElement = document.getElementById("navbar--section")
-  if (dragElement.style.top < "0"){
-    dragElement.style.top = "95px"
+window.onresize = () => {
+  if (window.innerWidth <= 601){
+    document.getElementById("nav--icon").innerHTML = "S"
   }
   else{
-    dragElement.style.top = "-100px"
+    document.getElementById("nav--icon").innerHTML = "Sarvagnya"
   }
-})
+}
